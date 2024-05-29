@@ -10,7 +10,7 @@
     "serve:ssr:ng-app": "node dist/ng-app/server/server.mjs",
     "lint": "ng lint",
     "lint:fix": "ng lint --fix",
-    "prettier": "npx prettier --write"
+    "prettier": "npx prettier --write src/**/*.{html,scss,ts}"
   },
   "husky": {
     "hooks": {
