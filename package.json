@@ -1,6 +1,7 @@
 {
   "name": "ng-app",
   "version": "0.0.0",
+  "private": false,
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -10,24 +11,9 @@
     "serve:ssr:ng-app": "node dist/ng-app/server/server.mjs",
     "lint": "ng lint",
     "lint:fix": "ng lint --fix",
-    "prettier": "npx prettier --write src/**/*.{html,scss,ts}"
+    "prettier": "npx prettier --write 'src/**/*.{html,scss,ts}'",
+    "prepare": "husky"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "*.{scss,html}": [
-      "npm run prettier",
-      "git add ."
-    ],
-    "*.{ts}": [
-      "npm run lint:fix",
-      "git add ."
-    ]
-  },
-  "private": true,
   "dependencies": {
     "@angular/animations": "^17.3.0",
     "@angular/common": "^17.3.0",
@@ -69,7 +55,6 @@
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
-    "lint-staged": "^15.2.2",
     "postcss": "^8.4.38",
     "prettier": "^3.2.5",
     "prettier-eslint": "^16.3.0",
