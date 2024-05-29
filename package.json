@@ -13,10 +13,10 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:ng-app": "node dist/ng-app/server/server.mjs",
-    "lint": "ng lint",
-    "lint:fix": "ng lint --fix",
-    "prettier": "npx prettier --write 'src/**/*.{html,scss,ts}'",
-    "prepare": "husky"
+    "prepare": "husky",
+    "lint": "eslint 'src/**/*.{ts,html}' --fix",
+    "lint:ng": "ng lint",
+    "prettier": "npx prettier --write 'src/**/*.{html,scss,ts}'"
   },
   "dependencies": {
     "@angular/animations": "^17.3.0",
@@ -59,6 +59,7 @@
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
+    "lint-staged": "^15.2.5",
     "postcss": "^8.4.38",
     "prettier": "^3.2.5",
     "prettier-eslint": "^16.3.0",

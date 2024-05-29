@@ -1,0 +1,4 @@
+{
+  "src/**/*.scss": "npm run prettier",
+  "src/**/*.{ts,html}": "npm run eslint"
+}
